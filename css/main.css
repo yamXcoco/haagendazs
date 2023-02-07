@@ -337,7 +337,7 @@ a {
   width: 1560px;
   height: 430px;
   margin: 0 auto;
-  background-image: url(/img/page2_01.png);
+  background-image: url('../img/page2_01.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
