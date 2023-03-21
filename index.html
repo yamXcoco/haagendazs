@@ -32,12 +32,13 @@
             <li>장바구니</li>
             <li>주문/배송조회</li>
           </ul>
+          <div class="bars"><i class="xi-bars"></i></div>
         </div>
         <div class="header_sub">
           <div class="contents">
             <div class="icon ic1">
               <a href="#x">
-                <i class="xi-align-justify"></i>
+                <i class="xi-share-alt-o"></i>
               </a>
             </div>
             <ul class="nav_02">
@@ -51,7 +52,7 @@
                 <li>브랜드</li>
               </a>
               <a href="./page/subpage_02.html">
-                <li>외식사업 고객용[B2B]</li>
+                <li>외식사업 고객[B2B]</li>
               </a>
             </ul>
             <div class="icon ic2">
@@ -184,11 +185,19 @@
     </div>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-      $(".slide_01").slick({
+      $('.slide_01').slick({
         autoplay: true,
         dots: true,
         arrows: false,
-      });
+        // height:
+      })
+    </script>
+    <script>
+      var width_size = window.innerWidth
+      $('.bars').click(function () {
+        $('.nav_01').toggleClass('active')
+        $(this).find('i').toggleClass('xi-close')
+      })
     </script>
   </body>
 </html>

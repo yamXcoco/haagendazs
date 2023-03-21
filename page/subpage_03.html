@@ -9,6 +9,16 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
@@ -22,12 +32,13 @@
             <li>장바구니</li>
             <li>주문/배송조회</li>
           </ul>
+          <div class="bars"><i class="xi-bars"></i></div>
         </div>
         <div class="header_sub">
           <div class="contents">
             <div class="icon ic1">
               <a href="#x">
-                <i class="xi-align-justify"></i>
+                <i class="xi-share-alt-o"></i>
               </a>
             </div>
             <ul class="nav_02">
@@ -41,7 +52,7 @@
                 <li>브랜드</li>
               </a>
               <a href="./subpage_02.html">
-                <li>외식사업 고객용[B2B]</li>
+                <li>외식사업 고객[B2B]</li>
               </a>
             </ul>
             <div class="icon ic2">
@@ -88,7 +99,6 @@
           <div class="content_01">
             <h1>용량</h1>
             <img src="../img/p3_icecream_2.png" alt="" />
-
             <h2>풍미 깊은 맛을 만들기 위하여 품질 좋은 원료만을 사용합니다.</h2>
           </div>
           <div class="content_02">
@@ -109,7 +119,9 @@
             <img src="../img/p3_rec.png" alt="" />
             <h1>이런 맛은 어떠세요</h1>
             <h2>구매하기</h2>
-            <ul>
+            <i class="fas fa-chevron-left prev xi-angle-left"></i>
+            <i class="fas fa-chevron-right next xi-angle-right"></i>
+            <ul class="post-wrapper">
               <li>
                 <a href="./subpage_03.html">
                   <img src="../img/ice_01.png" alt="" />
@@ -128,6 +140,20 @@
                     strawberry <br />
                     frozen yogurt
                   </p>
+                </a>
+              </li>
+              <li>
+                <a href="./subpage_03.html">
+                  <img src="../img/image 25.png" alt="" />
+                  <h3>바닐라</h3>
+                  <p>vanilla</p>
+                </a>
+              </li>
+              <li>
+                <a href="./subpage_03.html">
+                  <img src="../img/image 24.png" alt="" />
+                  <h3>화이트 피치</h3>
+                  <p>white peach</p>
                 </a>
               </li>
               <li>
@@ -187,20 +213,10 @@
               <h1 class="big">하겐다즈 고객만족센터</h1>
               <h2 class="phone">070-7549-7020</h2>
               <p>
-                * 고객센터 운영시간 : 평일 10:00 ~ 17:00 <br />
-                (점심시간 12:00~13:00)
+                * 고객센터 운영시간 : 평일 10:00 ~ 17:00 (점심시간 12:00~13:00)
               </p>
               <h4>개인정보처리방침 <br />이용약관 <br />이메일무단수집거부</h4>
             </li>
-            <!-- <li>
-              <p>
-                공지사항<br />
-                이벤트<br />
-                매장안내<br />
-                고객센터<br />
-              </p>
-              <input type="text" />
-            </li> -->
           </ul>
         </div>
       </div>
@@ -208,5 +224,37 @@
         <p>Copyright © 2021 Haagen-Dazs Korea. All Rights Reserved.</p>
       </div>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $('.post-wrapper').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        nextArrow: $('.next'),
+        prevArrow: $('.prev'),
+        responsive: [
+          {
+            breakpoint: 960,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      })
+    </script>
+    <script>
+      var width_size = window.innerWidth
+      $('.bars').click(function () {
+        $('.nav_01').toggleClass('active')
+        $(this).find('i').toggleClass('xi-close')
+      })
+    </script>
   </body>
 </html>
